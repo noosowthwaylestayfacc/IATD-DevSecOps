@@ -7,6 +7,7 @@ from models.books_model import Book
 from random import randrange
 from sqlalchemy.sql import text
 
+
 class User(db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True, unique=True, autoincrement=True)
@@ -14,6 +15,8 @@ class User(db.Model):
     password = db.Column(db.String(128), nullable=False)
     email = db.Column(db.String(128), nullable=False)
     admin = db.Column(db.Boolean, nullable=False, default=False)
+
+    
 
     books = relationship("Book", order_by=Book.id, back_populates="user")
 
