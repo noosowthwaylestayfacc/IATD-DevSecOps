@@ -212,7 +212,7 @@ jobs:
 
 
   submit_results:
-   needs: [build, dast]
+   needs: [build]
    if: true
    runs-on: ubuntu-latest
    steps:
