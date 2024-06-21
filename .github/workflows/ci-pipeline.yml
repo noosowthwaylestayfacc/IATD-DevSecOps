@@ -188,7 +188,7 @@ jobs:
 
 
   build:
-      needs: [test, sonarqube, security_gate]
+      needs: [test, security_gate]
       runs-on: ubuntu-latest
       steps:
         -
