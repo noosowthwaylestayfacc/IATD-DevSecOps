@@ -73,7 +73,7 @@ jobs:
        path: sonarqube-report.json
 
   dast:
-    needs: [test, sonarqube]
+    needs: [test]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -250,7 +250,7 @@ jobs:
        echo "Zap upload: $ZAP_RESPONSE"
 
   submit_reports:
-   needs: [test, sonarqube, dast]
+   needs: [test, sonarqube, dast, image-scan]
    if: true
    runs-on: ubuntu-latest
    steps:
