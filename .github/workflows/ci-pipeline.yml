@@ -222,7 +222,7 @@ jobs:
         env:
           IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/devops-labs:latest
         run: |
-          cosign sign --yes ${IMAGE}         
+          cosign sign --yes ${IMAGE}
 
   submit_results:
    needs: [build]
