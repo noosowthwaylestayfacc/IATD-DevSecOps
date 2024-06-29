@@ -188,7 +188,7 @@ jobs:
 
 
   build:
-    # needs: [security_gate]
+    needs: [dast]
     if: true
     permissions:
       id-token: write
