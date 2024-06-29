@@ -188,7 +188,7 @@ jobs:
 
 
   build:
-    needs: [dast]
+    # needs: [security_gate]
     if: true
     permissions:
       id-token: write
@@ -203,7 +203,7 @@ jobs:
       -
         name: Login to Docker Hub
         uses: docker/login-action@v3
-        with: 
+        with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
@@ -223,6 +223,7 @@ jobs:
           IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/devops-labs:latest
         run: |
           cosign sign --yes ${IMAGE}
+
 
   submit_results:
    needs: [build]
