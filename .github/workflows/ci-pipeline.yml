@@ -226,7 +226,7 @@ jobs:
 
 
   submit_results:
-   needs: [build]
+   needs: [test, sonarqube, dast, image-scan]
    if: true
    runs-on: ubuntu-latest
    steps:
