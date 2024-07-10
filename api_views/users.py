@@ -207,19 +207,3 @@ def delete_user(username):
         else:
             return Response(error_message_helper("Only Admins may delete users!"), 401, mimetype="application/json")
         
-
-
-@staticmethod
-def decode_auth_token(auth_token):
-    try:
-        if vuln:
-            payload = jwt.decode(auth_token, vuln_app.app.config.get('SECRET_KEY'), algorithms=["HS256","none"], options={"verify_signature": False} )
-        else:
-            payload = jwt.decode(auth_token, vuln_app.app.config.get('SECRET_KEY'), algorithms=["HS256"])
-        return payload['sub']
-    except jwt.ExpiredSignatureError:
-        return 'Signature expired. Please log in again.'
-    except jwt.InvalidTokenError as e:
-        return 'Invalid token. Please log in again.'
-    except Exception as e:
-        return e
