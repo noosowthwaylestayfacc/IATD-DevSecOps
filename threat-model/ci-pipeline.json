@@ -69,8 +69,8 @@
           },
           {
             "position": {
-              "x": 865,
-              "y": -119.99999999999989
+              "x": 878,
+              "y": -109.99999999999989
             },
             "size": {
               "width": 780,
@@ -163,11 +163,11 @@
               "threats": [
                 {
                   "id": "781c09bc-961d-4353-ae1f-57a13fb5ecb4",
-                  "title": "New STRIDE threat",
+                  "title": "Employee discloses secrets",
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Information disclosure",
-                  "description": "A naughty employee could choose to expose secrets",
+                  "description": "An employee could  expose secrets to a naughty employee by accidentally putting them somewhere in the repository",
                   "mitigation": "Use a tool like git-secrets, which can detect secrets and block the changes to the repository",
                   "modelType": "STRIDE",
                   "new": false,
@@ -176,35 +176,6 @@
                 }
               ]
             }
-          },
-          {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "id": "adba32ca-eb23-4243-ab5d-4b226a3c9344",
-            "source": {
-              "x": 180,
-              "y": 120
-            },
-            "target": {
-              "x": 230,
-              "y": 360
-            },
-            "vertices": [
-              {
-                "x": 360,
-                "y": 210
-              }
-            ]
           },
           {
             "shape": "flow",
@@ -687,53 +658,18 @@
             },
             "vertices": [
               {
-                "x": 880,
-                "y": -210
+                "x": 930,
+                "y": -240
               },
               {
                 "x": 770,
                 "y": -70
+              },
+              {
+                "x": 730,
+                "y": -10
               }
             ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "9fa8ebbb-0dd9-4ab0-ba9f-7ff140a1272f",
-            "source": {
-              "cell": "55b9ef5c-f055-4d4a-a915-1544826efb56"
-            },
-            "target": {
-              "cell": "5c20dfda-db28-422f-8ade-8fbef2e9271f"
-            }
           },
           {
             "shape": "flow",
@@ -1019,8 +955,135 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "e0b5a223-2b2e-425d-aa42-98623bf72d1f",
+            "source": {
+              "cell": "55b9ef5c-f055-4d4a-a915-1544826efb56"
+            },
+            "target": {
+              "x": 1090,
+              "y": -80
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "6ad60c3d-979b-4a31-8a15-862cf896b5dd",
+            "source": {
+              "cell": "eae30539-5772-45e5-8e40-095ae2398fa8"
+            },
+            "target": {
+              "x": 2004,
+              "y": -30
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "adba32ca-eb23-4243-ab5d-4b226a3c9344",
+            "source": {
+              "x": 180,
+              "y": 120
+            },
+            "target": {
+              "x": 230,
+              "y": 400
+            },
+            "vertices": [
+              {
+                "x": 360,
+                "y": 210
+              },
+              {
+                "x": 340,
+                "y": 310
+              },
+              {
+                "x": 290,
+                "y": 370
+              }
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
+          },
+          {
             "position": {
-              "x": 119.99999999999989,
+              "x": 200,
               "y": 280.0000000000001
             },
             "size": {
@@ -1056,11 +1119,13 @@
                 "text": "Git Repository"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1074,13 +1139,27 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "b0e631e0-7bf1-4c48-b4a3-d74085909529",
+                  "title": "Repository gets cloned without permission",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "A naughty developer copies/clones the repository without permission, possibly revealing its contents  to the outside",
+                  "mitigation": "Enable audit logging and monitoring of data access",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -1348,8 +1427,8 @@
           },
           {
             "position": {
-              "x": 1231.75,
-              "y": -426
+              "x": 1170,
+              "y": -446
             },
             "size": {
               "width": 112.5,
@@ -1380,7 +1459,7 @@
               "threats": [
                 {
                   "id": "ff17ec2c-6c8e-4516-8a97-bf18a1a370c5",
-                  "title": "New STRIDE threat",
+                  "title": "Someone spoofing the administrator",
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Spoofing",
@@ -1437,12 +1516,12 @@
               "threats": [
                 {
                   "id": "2f9d0e31-f859-4974-9557-b97dfdba41d3",
-                  "title": "New STRIDE threat",
+                  "title": "Tampered dependency",
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Tampering",
-                  "description": "Someone could tamper with the repositories you are getting dependencies from",
-                  "mitigation": "Do an automated dependencies analysis",
+                  "description": "Someone could tamper with the repositories you are getting dependencies from, or make a malicious dependency a developer might use, not knowing it's harmful",
+                  "mitigation": "Do an automated dependencies analysis, make a company policy that will check for approval of every dependency added",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 4,
@@ -1488,12 +1567,12 @@
               "threats": [
                 {
                   "id": "b83b4d50-ffda-491f-8148-e2b2937e17a0",
-                  "title": "New STRIDE threat",
+                  "title": "Image with backdoor",
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Tampering",
-                  "description": "A naughty developer pushes an image containing a backdoor, and that image will be deployed",
-                  "mitigation": "Use image signing so only images that have been properly signed can be deployed",
+                  "description": "A naughty developer pushes an image containing a backdoor somewhere to the container, intending for that image to be pulled and deployed as a production image",
+                  "mitigation": "Use image signing so only images that have been properly signed can be deployed, don't store development and production images on the same container and restrict access to the production container",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 11,
@@ -1553,13 +1632,11 @@
                 "text": "Sonarqube Database"
               },
               "topLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -1573,27 +1650,13 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": [
-                {
-                  "id": "e09c7357-8009-4451-8d96-f8b90de856f5",
-                  "title": "New STRIDE threat",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Denial of service",
-                  "description": "Someone might flood  Sonarqube to make it too slow or unable to access its database ",
-                  "mitigation": "Sonarqube can implement cloud-based denial of service protection",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 5,
-                  "score": ""
-                }
-              ]
+              "threats": []
             }
           },
           {
@@ -1644,7 +1707,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Container repository Dockerhub"
+                "text": "Container repository \nDockerhub"
               },
               "topLine": {
                 "strokeWidth": 1.5,
@@ -1661,7 +1724,7 @@
             "id": "eae30539-5772-45e5-8e40-095ae2398fa8",
             "data": {
               "type": "tm.Store",
-              "name": "Container repository Dockerhub",
+              "name": "Container repository \nDockerhub",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -1704,6 +1767,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 11
+    "threatTop": 14
   }
 }
