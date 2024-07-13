@@ -188,7 +188,7 @@ jobs:
 
 
   build:
-    needs: [security_gate]
+    needs: [test, sonarqube, dast, image-scan]
     if: true
     permissions:
       id-token: write
@@ -226,7 +226,7 @@ jobs:
 
 
   submit_results:
-   needs: [test, sonarqube, dast, image-scan]
+   needs: [test, sonarqube, dast, image-scan, build]
    if: true
    runs-on: ubuntu-latest
    steps:
