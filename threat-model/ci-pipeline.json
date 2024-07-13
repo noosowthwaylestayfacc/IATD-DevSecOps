@@ -1424,7 +1424,7 @@
                   "severity": "Medium",
                   "type": "Spoofing",
                   "description": "Someone might spoof and pretend to be the administrator if they find access to the administrator's account",
-                  "mitigation": "Make the administrator have multifactor authentication to log in, encrypt the laptop/computer in case it ever gets stolen",
+                  "mitigation": "Make the administrator have multifactor authentication to log in, encrypt the laptop/computer in case it ever gets stolen, use credentials that rotate",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 3,
@@ -1476,11 +1476,11 @@
               "threats": [
                 {
                   "id": "2f9d0e31-f859-4974-9557-b97dfdba41d3",
-                  "title": "Tampered dependency",
+                  "title": "Malicious dependency",
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Tampering",
-                  "description": "Someone could tamper with the repositories you are getting dependencies from, or make a malicious dependency a developer might use, not knowing it's harmful",
+                  "description": "Someone could tamper with the repositories you are getting dependencies from, or make a malicious dependency a developer might choose to use, not knowing it's harmful",
                   "mitigation": "Do an automated dependencies analysis, make a company policy that will check for approval of every dependency added",
                   "modelType": "STRIDE",
                   "new": false,
